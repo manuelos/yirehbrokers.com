@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<extension
+ 	type="module"
+ 	version="2.5"
+ 	client="site"
+ 	method="upgrade">
+
+    <!-- Nombre del Módulo -->
+ 	<name>Cotizador - Module</name>
+
+	<!-- Datos opcionales -->
+ 	<author>Carlos Hdez.</author>
+ 	<creationDate>Abril 2015</creationDate>
+ 	<copyright>Copyright Info</copyright>
+ 	<license>Licencia Info</license>
+ 	<authorEmail>ylrahs900613@gmail.com</authorEmail>
+ 	<authorUrl></authorUrl>
+
+	<!-- Versión de desarrollo del módulo -->
+ 	<version>1.0.0</version>
+
+	<!-- Descripción opcional del módulo -->
+	<description>Este módulo contiene formularios para cotizar</description>
+
+	<files>
+  		<filename module="mod_cotizar">mod_cotizar.php</filename>
+  		<folder>tmpl</folder>
+  		<filename>helper.php</filename>
+  		<filename>index.html</filename>  
+  		<filename>mod_cotizar.xml</filename>
+ 	</files>
+
+ 	<languages>
+  		<language tag="en-GB">en-GB.mod_cotizar.ini</language>
+  		<language tag="es-ES">es-ES.mod_cotizar.ini</language>
+ 	</languages>
+
+ 	<config>
+  		<fields name="params">
+   			<fieldset name="basic">
+				<field
+					name="showDate"
+					type="radio"
+					default="0"
+					label="MOD_AUTHOR_FIELD_SHOWDATE_LABEL"
+					description="MOD_AUTHOR_FIELD_SHOWDATE_DESC">
+					<option
+						value="0">JHIDE</option>
+					<option
+						value="1">JSHOW</option>
+				</field>
+  	 		</fieldset>
+
+		   <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="owncache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+		   </fieldset>
+  		</fields>
+ 	</config>
+</extension>
